@@ -5,29 +5,42 @@
   <style type="text/css">
     a {text-decoration:none;}
     body{font-family:Helvetica;}
-    #div_body{width:420.4px;height:275.2px;border:thin solid #b9b9b9;}
-    #div_body_head{width:420.4px;height:39.6px;color:#fff;font-weight:bold;font-size:17px;
+    #div_body{width:420.4px;height:275.2px;border:thin solid #b9b9b9;border-radius:8px;}
+    #div_body_head{width:420.4px;height:39.6px;color:#fff;font-weight:bold;font-size:17px;border-radius:8px 8px 0 0;
+    border:thin solid #C17259;
     background:-webkit-linear-gradient(top,#F7928C,#D87353);
     
+    
     }
-    .body_head_span{display:inline-block;position:relative;top:9px;}
+    .body_head_span{display:inline-block;position:relative;top:9px;color:#fff;text-align:center;}
+    #ico_close:hover {background:#fff;color:#D87353;}
     .inputBlank{display:block;font-size:14px;position:relative;left:28px;width:330px;border:thin solid #DCDCDC;padding:12px;color:#6A6969;}
-    #div_foot_login{position:relative;top:85px;left:270px;border:thin solid #B6CAD1;width:96px;font-size:16px;color:#8199A1;font-weight:bold;padding:7px;
+    #div_foot{position:relative;top:85px;}
+    #div_foot_login{position:relative;left:144px;border:thin solid #B6CAD1;width:100px;font-size:16px;color:#8199A1;font-weight:bold;padding:6px;
       background:-webkit-linear-gradient(top,#EFF6F9,#C6DFE9);
       border-radius:20px;
       text-align:center;
+      display:inline-block;
     }
+    #div_chbox{
+      display:inline-block;
+      left:25px;
+      position:relative;
+      line-height:28px;
+    }
+    #remember{zoom:150%;position:relative;top:3px;}
   </style>
 </head>
 <body>
   <div id="div_body">
     <div id="div_body_head">
       <span style="left:20px;" class="body_head_span">Sign In</span>
-      <a href="#"><span class="body_head_span" style="left:330px;">x</span></a>
+      <a href="#"><span class="body_head_span" id="ico_close" style="left:320px;width:20px;">x</span></a>
     </div>
     <input type="text" id="uName" class="inputBlank" value="Username" style="top:26px;"/>
     <input type="text" id="uPass" class="inputBlank" value="Password" style="top:52px;"/>
     <div id="div_foot">
+      <div id="div_chbox"><input type="checkbox" name="remember" id="remember" /><label for="remember">Remember me</label></div>
       <a href="#"><div id="div_foot_login">Log In</div></a>
     </div>
   </div>
