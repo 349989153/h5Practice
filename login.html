@@ -22,6 +22,7 @@
       text-align:center;
       display:inline-block;
     }
+    #div_foot_login:active{background:#C6DFE9;color:#EFF6F9;}
     #div_chbox{
       display:inline-block;
       left:25px;
@@ -30,6 +31,40 @@
     }
     #remember{zoom:150%;position:relative;top:3px;}
   </style>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded",function(){
+      var uName = document.getElementById("uName");
+      var uPass = document.getElementById("uPass");
+      
+      function elementOperate(obj){
+        var defaultVal = obj.id==="uName"?"Username":"Password";
+        var value;
+        return {
+          Txt_onfocus:function(){
+            value = obj.value;
+            if(value === defaultVal){
+              obj.value = '';
+              obj.select();
+            }else {
+              obj.select();
+            }
+          },
+          Txt_onblur:function(){
+            value = obj.value;
+            if(value ==''){
+              obj.value = defaultVal;
+            }else {
+            }
+          }
+        }
+      }
+      
+      uName.onclick = elementOperate(uName).Txt_onfocus;
+      uName.onblur = elementOperate(uName).Txt_onblur;
+      uPass.onclick = elementOperate(uPass).Txt_onfocus;
+      uPass.onblur = elementOperate(uPass).Txt_onblur;
+    },false);
+  </script>
 </head>
 <body>
   <div id="div_body">
