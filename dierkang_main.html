@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<head>
+  <title>蒂尔康</title>
+  <style type="text/css">
+    .banner{
+      background:url(images/bg1_01.png) no-repeat center;
+      height:470px;
+      overflow:hidden;}
+    .menu ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      text-align:center;
+      background:#6c360e;
+      height:65px;
+    }
+    .menu ul li{
+      float:left;
+      margin-right:100px;
+      color:#fff;
+      font-size:18px;
+      position:relative;
+      top:12px;
+      left:210px;
+    }
+    .menu ul li div{
+      width:74px;
+      height:17px;
+      color:#fff;
+      background:#4b260a;
+      font-size:9px;
+      border-radius:1px;
+      line-height:17px;
+      margin-top:5px;
+    }
+    .menu ul li a{
+      text-decoration:none;
+      color:#fff;
+    }
+    .menu ul li a:hover{
+      background:blue;
+      color:yellow;
+    }
+    .slides {
+      list-style-type:none;
+      position:relative;
+      z-index:1;
+      font-size:0;
+    }
+    .slides li{
+      height:470px;
+      width:1300px;
+      -webkit-transform-origin:right;
+      -webkit-transform:scaleX(1.0309);
+    }
+    .flexslider{
+      position:relative;
+      height:470px;
+      overflow:hidden;
+      width:100%
+    }
+    .flex-control-nav{
+      position:absolute;
+      bottom:10px;
+      z-index:2;
+      width:100%;
+      text-align:center;
+    }
+    .flex-control-nav li{
+      display:inline-block;
+      *display:inline;
+      zoom:1;
+      width:14px;
+      height:14px;
+      margin:0 5px;
+    }
+    .flex-control-nav a{
+      display:inline-block;
+      width:14px;
+      height:14px;
+      line-height:40px;
+      overflow:hidden;
+      background:url(images/dot.png) right 0 no-repeat;
+      cursor:pointer;
+    }
+    .flex-control-nav .flex-active{
+      background-position:0 0;
+    }
+    a,img{
+      border:0;
+    }
+  </style>
+  <script type="text/javascript">
+  </script>
+</head>
+<body>
+  <div class="mainwrapper">
+    <div class="menu">
+      <ul>
+        <li style="margin-right:50px;"><img src="images/logo_03.png"></img></li>
+        <li><a href="#">网站首页<div class="grey_div">HOME</div></a></li>
+        <li><a href="#">企业简介<div class="grey_div">BRIEFING</div></a></li>
+        <li><a href="#">产品文化<div class="grey_div">CULTURE</div></a></li>
+        <li><a href="#">产品展示<div class="grey_div">PRODUCTS</div></a></li>
+        <li><a href="#">招贤纳士<div class="grey_div">JOB</div></a></li>
+        <li><a href="#">联系我们<div class="grey_div">ABOUT US</div></a></li>
+      </ul>
+    </div>
+    <div class="banner">
+      <div class="flexslider">
+        <ul class="slides">
+          <li style="background:url(images/pic_1_02.png) bottom center no-repeat"></li>
+          <li style="background:url(images/pic_2_03.png) bottom center no-repeat"></li>
+          <li style="background:url(images/pic_3_03.png) bottom center no-repeat"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".flexslider").flexslider({
+        directionNav:false,
+        pauseOnAction:false
+      });
+    });
+  </script>
+</body>
+</html>
