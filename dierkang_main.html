@@ -47,10 +47,6 @@
       text-decoration:none;
       color:#fff;
     }
-    .menu ul li a:hover{
-      background:blue;
-      color:yellow;
-    }
     .slides {
       list-style-type:none;
       position:relative;
@@ -164,18 +160,18 @@
       text-align:center;
     }
     .menu ul li .undLine{
+      opacity:0;
       border:0;
       width:2px;
       height:2px;
       background:#fff;
       position:absolute;
       top:20px;
-      transition:0.3s ease-out;
-      -ms-transition:0.3s ease-out;
-      -o-transition:0.3s ease-out;
-      -moz-transition:0.3s ease-out;
-      -webkit-transition:0.3s ease-out;
-
+      transition:0.2s ease-out;
+      -ms-transition:0.2s ease-out;
+      -o-transition:0.2s ease-out;
+      -moz-transition:0.2s ease-out;
+      -webkit-transition:0.2s ease-out;
     }
     .menu ul li .undLine-left{
       left:-50px;
@@ -186,10 +182,12 @@
     .menu ul li a:hover .undLine-left{
       left:0px;
       width:100%;
+      opacity:1;
     }
     .menu ul li a:hover .undLine-right{
       left:0px;
       width:100%;
+      opacity:1
     }
   </style>
   <script type="text/javascript">
@@ -200,12 +198,12 @@
     <div class="menu">
       <ul>
         <li style="margin-right:50px;"><img src="images/logo_03.png" style="cursor:pointer;"></img></li>
-        <li><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span><a href="#">网站首页<div class="grey_div">HOME</div></a></li>
-        <li><a href="#">企业简介<div class="grey_div">BRIEFING</div></a></li>
-        <li><a href="#">产品文化<div class="grey_div">CULTURE</div></a></li>
-        <li><a href="#">产品展示<div class="grey_div">PRODUCTS</div></a></li>
-        <li><a href="#">招贤纳士<div class="grey_div">JOB</div></a></li>
-        <li><a href="#">联系我们<div class="grey_div">ABOUT US</div></a></li>
+        <li><a href="#" class="button">网站首页<div class="grey_div">HOME</div><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span></a></li>
+        <li><a href="#">企业简介<div class="grey_div">BRIEFING</div><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span></a></li>
+        <li><a href="#">产品文化<div class="grey_div">CULTURE</div><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span></a></li>
+        <li><a href="#">产品展示<div class="grey_div">PRODUCTS</div><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span></a></li>
+        <li><a href="#">招贤纳士<div class="grey_div">JOB</div><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span></a></li>
+        <li><a href="#">联系我们<div class="grey_div">ABOUT US</div><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span></a></li>
       </ul>
     </div>
     <div class="banner">
