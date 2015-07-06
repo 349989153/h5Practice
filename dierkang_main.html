@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>蒂尔康</title>
   <style type="text/css">
+    *{
+      margin:0;
+      padding:0;
+    }
     body{
       width:1333px;
     }
@@ -159,6 +163,34 @@
       margin:0 auto;
       text-align:center;
     }
+    .menu ul li .undLine{
+      border:0;
+      width:2px;
+      height:2px;
+      background:#fff;
+      position:absolute;
+      top:20px;
+      transition:0.3s ease-out;
+      -ms-transition:0.3s ease-out;
+      -o-transition:0.3s ease-out;
+      -moz-transition:0.3s ease-out;
+      -webkit-transition:0.3s ease-out;
+
+    }
+    .menu ul li .undLine-left{
+      left:-50px;
+    }
+    .menu ul li .undLine-right{
+      left:124px;
+    }
+    .menu ul li a:hover .undLine-left{
+      left:0px;
+      width:100%;
+    }
+    .menu ul li a:hover .undLine-right{
+      left:0px;
+      width:100%;
+    }
   </style>
   <script type="text/javascript">
   </script>
@@ -168,7 +200,7 @@
     <div class="menu">
       <ul>
         <li style="margin-right:50px;"><img src="images/logo_03.png" style="cursor:pointer;"></img></li>
-        <li><a href="#">网站首页<div class="grey_div">HOME</div></a></li>
+        <li><span class="undLine undLine-left"></span><span class="undLine undLine-right"></span><a href="#">网站首页<div class="grey_div">HOME</div></a></li>
         <li><a href="#">企业简介<div class="grey_div">BRIEFING</div></a></li>
         <li><a href="#">产品文化<div class="grey_div">CULTURE</div></a></li>
         <li><a href="#">产品展示<div class="grey_div">PRODUCTS</div></a></li>
