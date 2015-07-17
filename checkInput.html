@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bootstrap</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <form class="form" role="form">
+      <div class="form-group">
+        <input type="text" class="form-control" id="enterMail" placeholder="请输入用户名" />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="enterPhone" placeholder="请输入手机号" />
+      </div>
+    </form>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/npm.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        
+        $("#enterMail").on('change',{"regExp":/^\d+$/g,"errorMsg":"输入姓名有误！","correctMsg":"姓名输入正确"},checkInput);
+        
+        function checkInput(event){
+          var elem = $(event.target);
+          var elemValue = elem.val();
+          var label =$("<label class='control-label' for='" + elem.attr("id") + "'></label>");
+          if(!event.data.regExp.test(elemValue)){
+            elem.parent().removeClass();
+            elem.parent().addClass("has-error form-group");
+            label.html(event.data.errorMsg);
+            $("label").remove("[for=" + elem.attr("id") +"]");
+            elem.after(label);
+          }else {
+            elem.parent().removeClass();
+            elem.parent().addClass("has-success form-group");
+            label.html(event.data.correctMsg);
+            $("label").remove("[for=" + elem.attr("id") +"]");
+            elem.after(label);
+          }
+        }
+        
+      });
+    </script>
+  </body>
+</html>
